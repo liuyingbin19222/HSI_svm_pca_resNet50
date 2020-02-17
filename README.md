@@ -7,4 +7,14 @@ use SVM  and PCA_ResNet50 to classify HSI
     ![PROCESS](./SVMPROCESS.jpg)
     ![precisionScore](./t2.png)   
 - stage2:
+    use PCA and ResNet50 to classify HSI.   Firstly,choose 20% of the data as the training data , the other is the test data.  Use PCA as the method of demension reduction , after I put the data into ResNet50  , finally get  the resut.
+    Here is the structure of ResNet50 ![resnet50](./resNet50.jpg).   The result: loss:![loss](.\loss_curve.jpg). accuary: ![accuary](./acc_curve.jpg)   
+
+    Reference:
+    [PCA](https://blog.csdn.net/program_developer/article/details/80632779)
+    [ResNet50_on_Keras](https://blog.csdn.net/u013733326/article/details/80250818)
+    [HybridSN](https://github.com/gokriznastic/HybridSN)
+
+
+
 

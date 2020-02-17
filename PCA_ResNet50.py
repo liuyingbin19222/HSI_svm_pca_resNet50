@@ -320,8 +320,20 @@ def main():
     model = ResNet50(input_shape=(25, 25, 30), classes=16)
     model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
 
-    history = model.fit(Xtrain, ytrain, epochs=100, batch_size=25)
+    history = model.fit(Xtrain, ytrain, epochs=5, batch_size=25)
     preds = model.evaluate(Xtest, ytest)
+
+    plt.figure(figsize=(5,5))
+    plt.ylim(0,1.1)
+    plt.grid()
+    plt.plot(history.history['accuracy'])
+    #plt.plot(history.history['val_acc'])
+    plt.ylabel('Accuracy')
+    plt.xlabel('Epochs')
+    plt.legend(['Training','Validation'])
+    plt.savefig("acc_curve.jpg")
+    plt.show()
+
     plt.figure(figsize=(7,7))
     plt.grid()
     plt.plot(history.history['loss'])
@@ -329,19 +341,10 @@ def main():
     plt.ylabel('Loss')
     plt.xlabel('Epochs')
     plt.legend(['Training','Validation'], loc='upper right')
-    plt.savefig("loss_curve.txt")
+    plt.savefig("loss_curve.jpg")
     plt.show()
 
-    plt.figure(figsize=(5,5))
-    plt.ylim(0,1.1)
-    plt.grid()
-    plt.plot(history.history['acc'])
-    #plt.plot(history.history['val_acc'])
-    plt.ylabel('Accuracy')
-    plt.xlabel('Epochs')
-    plt.legend(['Training','Validation'])
-    plt.savefig("acc_curve.txt")
-    plt.show()
+
 
 
     print("误差率:", str(preds[0]))
