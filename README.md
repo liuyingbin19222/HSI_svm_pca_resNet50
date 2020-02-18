@@ -31,7 +31,7 @@ use SVM  and PCA_ResNet50 to classify HSI
 
 
 - contact:
-    if you have problems , you can picu up an issue and communicate with me , here is my wechat number:Yingbin192
+    if you have problems , you can pick up an issue and communicate with me , here is my wechat number:Yingbin192
 
 
 
