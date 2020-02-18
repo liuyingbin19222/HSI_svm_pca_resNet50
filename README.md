@@ -16,8 +16,18 @@ use SVM  and PCA_ResNet50 to classify HSI
     [HybridSN](https://github.com/gokriznastic/HybridSN)
 
 - how to use it:
-    run ``` pip install -r requirements.txt  ```first to install the packages.
-    if you want to use SVM , you can run ```python train_demo.py``` . If you want to use PCA+ResNet50 , you can run ``` python PCA_ResNet50.py ```
+    run :
+
+    ``` pip install -r requirements.txt  ```
+
+    first to install the packages.
+    if you want to use SVM , you can run 
+    
+    ```python train_demo.py``` . 
+    
+    If you want to use PCA+ResNet50 , you can run 
+    
+    ``` python PCA_ResNet50.py ```
 
 
 

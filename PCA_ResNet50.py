@@ -45,7 +45,7 @@ import os
 import spectral
 
 ## GLOBAL VARIABLES
-dataset = 'PU'
+dataset = 'IP'
 test_ratio = 0.8
 windowSize = 25
 
