@@ -320,7 +320,7 @@ def main():
     model = ResNet50(input_shape=(25, 25, 30), classes=16)
     model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
 
-    history = model.fit(Xtrain, ytrain, epochs=3, batch_size=25)
+    history = model.fit(Xtrain, ytrain, epochs=100, batch_size=25)
     preds = model.evaluate(Xtest, ytest)
 
     plt.figure(figsize=(5,5))
