@@ -30,4 +30,8 @@ use SVM  and PCA_ResNet50 to classify HSI
     ``` python PCA_ResNet50.py ```
 
 
+- contact:
+    if you have problems , you can picu up an issue and communicate with me , here is my wechat number:Yingbin192
+
+
 
