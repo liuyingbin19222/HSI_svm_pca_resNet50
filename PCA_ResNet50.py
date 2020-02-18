@@ -45,7 +45,7 @@ import os
 import spectral
 
 ## GLOBAL VARIABLES
-dataset = 'IP'
+dataset = 'PU'
 test_ratio = 0.8
 windowSize = 25
 
@@ -320,7 +320,7 @@ def main():
     model = ResNet50(input_shape=(25, 25, 30), classes=16)
     model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])
 
-    history = model.fit(Xtrain, ytrain, epochs=100, batch_size=25)
+    history = model.fit(Xtrain, ytrain, epochs=3, batch_size=25)
     preds = model.evaluate(Xtest, ytest)
 
     plt.figure(figsize=(5,5))
@@ -328,7 +328,7 @@ def main():
     plt.grid()
     plt.plot(history.history['accuracy'])
     #plt.plot(history.history['val_acc'])
-    plt.ylabel('Accuracy')
+    plt.ylabel( dataset+' _Accuracy')
     plt.xlabel('Epochs')
     plt.legend(['Training','Validation'])
     plt.savefig("acc_curve.jpg")
@@ -338,7 +338,7 @@ def main():
     plt.grid()
     plt.plot(history.history['loss'])
     #plt.plot(history.history['val_loss'])
-    plt.ylabel('Loss')
+    plt.ylabel(dataset+' _Loss')
     plt.xlabel('Epochs')
     plt.legend(['Training','Validation'], loc='upper right')
     plt.savefig("loss_curve.jpg")
