@@ -14,7 +14,7 @@ use SVM  and PCA_ResNet50 to classify HSI
     [PCA](https://blog.csdn.net/program_developer/article/details/80632779)
     [ResNet50_on_Keras](https://blog.csdn.net/u013733326/article/details/80250818)
     [HybridSN](https://github.com/gokriznastic/HybridSN)
-    ![test](https://raw.githubusercontent.com/liuyingbin19222/ImageData/master/zhaowei.jpeg)
+
 
 
 
