@@ -36,8 +36,8 @@ random_state = np.random.RandomState(0)
 number = 16
 # 加载数据;
 def load_mat():
-    m = loadmat("./data/Indian_pines_corrected.mat")
-    n = loadmat("./data/Indian_pines_gt.mat")  # 加载 ground_truth;
+    m = loadmat("./Indian_pines_corrected.mat")
+    n = loadmat("./Indian_pines_gt.mat")  # 加载 ground_truth;
     reorder_n = np.reshape(n["indian_pines_gt"], 145 * 145)  # ground_truth转换为一维数组;
     reorder_l = np.reshape(m["indian_pines_corrected"], (145 * 145, 200))  # ground_pines转换为二维矩阵;
     return reorder_n,reorder_l
