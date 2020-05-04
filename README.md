@@ -1,5 +1,9 @@
 # HSI_svm_pca_resNet50
 use SVM  and PCA_ResNet50 to classify HSI
+===== update：
+Besides using NMF method , then i use GNMF method  ,  and i compare the result between NMF and GNMF.
+result:
+![t2.png](https://i.loli.net/2020/05/04/KOb6xdEf4YJtr2q.png)
 - stage1:
     use SVM to classify HSI(Hyperspectral Image). opertion : Firstly , transfer 3D Indian pines data to 2D data , and the origial groundtruth data is 2D data , I transfer it to 1D data. Then, according the quantity of GT(groundTruth) ,  I choose 15 vectors from the first three least and choose 50 vectors from the other vectors. Treat these data as training data.the left data is test data. And I use the NMF as the method of demension reduction . Before NMF , I normalize the data using Z-Score. Then i use NNLS on the W matrix AFTER NMF and get H matrix. Finally i use SVM to fit and predict the label.  This is the [NNLS](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.nnls.html). 
     
@@ -32,6 +36,7 @@ use SVM  and PCA_ResNet50 to classify HSI
 
 - contact:
     if you have problems , you can pick up an issue and communicate with me , here is my wechat number:Yingbin192
+    
 
 
 
